@@ -10,6 +10,14 @@
 
 </head>
 <body>
+{% if user.is_authenticated %}
+    Hello {{ user.email }} | <a href="{% url 'account_logout' %}">LogOut</a>
+{% else %}
+    <a href="{% url 'account_login' %}">LogIn</a> | <a href="{% url 'account_signup' %}">SignUp</a>
+
+{% endif %}
+
+
 {% block content %}
 
 {% endblock %}
