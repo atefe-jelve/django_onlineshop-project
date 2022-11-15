@@ -40,20 +40,23 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
-    # local apps
-    "accounts.apps.AccountsConfig",
-    "pages.apps.PagesConfig",
-    'products.apps.ProductsConfig',
-    'cart.apps.CartConfig',
+    "django.contrib.humanize",
 
     # third party apps
+    'jalali_date',
     'rosetta',
     "crispy_forms",
     'allauth',
     'allauth.account',
 
 
+
+    # local apps
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
+    'persian_translate.apps.PersianTranslateConfig',
 ]
 
 SIDE_ID = 1
